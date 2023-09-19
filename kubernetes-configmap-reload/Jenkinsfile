@@ -1,7 +1,7 @@
 @Library('jenkins-shared-library@main') _
 pipeline {
 
-  agent batch4
+  agent any
   
   parameters {
 	choice(name: 'action', choices: 'create\nrollback', description: 'Create/rollback of the deployment')
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 gitCheckout(
                     branch: "main",
-                    url: "https://github.com/praveen1994dec/spring-cloud-kubernetes.git"
+                    url: "https://github.com/singhmohit14072002/spring-cloud-kubernetes.git"
                 )
             }
         }
