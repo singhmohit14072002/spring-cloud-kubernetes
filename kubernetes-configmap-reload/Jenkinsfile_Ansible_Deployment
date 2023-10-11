@@ -46,14 +46,14 @@ pipeline {
 	            }
 	        }
 	    }
-	    stage("Docker CleanUP") {
+	  //  stage("Docker CleanUP") {
 	        when {
 				expression { params.action == 'create' }
 			}
 	        steps {
 	            dockerCleanup ( "${params.ImageName}", "${params.docker_repo}" )
 			}
-		}
+	//	}
 	    stage("Create deployment") {
 			when {
 				expression { params.action == 'create' }
