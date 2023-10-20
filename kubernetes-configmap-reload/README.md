@@ -61,7 +61,7 @@ Build Docker image for Springboot Application
 --------------
     docker build -t praveen1994dec/kubernetes-configmap-reload .
   
-Docker login
+Docker Login
 -------------
     docker login
     
